@@ -1,0 +1,28 @@
+header {
+}
+.search-div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 10px;
+  width: 50vw;
+}
+
+.search-query {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #d3d3d3;
+  outline: none;
+}
+.search-icon {
+  position: absolute;
+  background-color: #f8f8f8;
+  height: 100%;
+  width: 75px;
+  right: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #d3d3d3;
+  justify-content: center;
+}
