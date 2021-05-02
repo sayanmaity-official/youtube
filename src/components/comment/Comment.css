@@ -9,8 +9,15 @@
   margin-bottom: 20px;
   padding: 5px;
 }
+.signed-user-img {
+  position: relative;
+  top: -15px;
+}
+.post-comment {
+  width: 100%;
+}
 .comment-input {
-  width: 90%;
+  width: 100%;
   border: none;
   outline: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -18,7 +25,38 @@
   margin: 5px;
   background-color: #f9f9f9;
 }
+.comment-disclaimer-and-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.yt-t-c {
+  font-size: 0.8rem;
+  color: #606060;
+  padding: 5px;
+}
+button:focus {
+  outline: none;
+}
+button {
+  padding: 7px 12px;
+  margin: 2px;
 
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+button.comment-submit {
+  background-color: #065fd4;
+  color: #fff;
+}
+.comment-submit:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+button.comment-cancel {
+  color: #606060;
+}
 ul {
   padding-left: 0;
   list-style-type: none;
@@ -35,11 +73,18 @@ li.comment-body {
 .yt-primary-text {
   color: #030303;
   padding: 5px;
+
+  font-size: 13px;
+  font-weight: 600;
+  font-family: Roboto, Arial, sans-serif;
 }
 .yt-secondary-text {
   color: #606060;
   padding: 5px;
+  font-size: 13px;
+  font-weight: 400;
 }
 .yt-comment-text {
-  color: rgba(1, 1, 1, 0.7);
+  color: #030303;
+  font-size: 14px;
 }

@@ -9,11 +9,11 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="app-container">
-        <div className="yt-player-and-comment w-75 p-4">
+        <div className="yt-player-and-comment">
           <Player />
           <Comment />
         </div>
-        <div className="yt-video-reccomendation p-4">
+        <div className="yt-video-reccomendation">
           <Recommendation />
         </div>
       </div>

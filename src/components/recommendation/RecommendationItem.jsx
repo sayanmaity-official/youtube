@@ -2,29 +2,35 @@ import React from "react";
 import { useDispatch } from "react-redux";
 
 import { setNewVideo } from "../../action/recommendAction";
+import { ViewsFormatter, timeFormatter } from "../../utils/util";
 import "./RecommendationItem.css";
 
 const RecommendationItem = (props) => {
   const dispatch = useDispatch();
+
   const changeVideo = (videoId) => {
     dispatch(setNewVideo(videoId));
   };
+
   return (
     <div className="recommendation-container">
       <div className="yt-video-thumbnail">
         <img
-          src="https://picsum.photos/200/100"
+          width="190"
+          height="100"
+          src={props.thumbnail_url}
           alt=""
           onClick={() => changeVideo(props.videoId)}
         />
       </div>
       <div className="yt-video-short-desc">
         <h5 className="yt-video-short-title">
-          WILD - Here We Go (Official Lyric Video)
+          {props.title.substring(0, 100)}
         </h5>
-        <h5 className="channel-name yt-text-secondary">Wild</h5>
+        <h5 className="channel-name yt-text-secondary">{props.author_name}</h5>
         <span className="yt-text-secondary">
-          248k views &middot; 5 years ago
+          {ViewsFormatter(props.viewCount)} views &middot;{" "}
+          {timeFormatter((new Date() - new Date(props.publishedAt)) / 1000)} ago
         </span>
       </div>
     </div>

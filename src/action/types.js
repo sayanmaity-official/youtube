@@ -1,1 +1,4 @@
 export const SET_NEW_VIDEO = "SET_NEW_VIDEO";
+export const LOAD_COMMENTS = "LOAD_COMMENTS";
+export const ADD_NEW_COMMENT = "ADD_NEW_COMMENT";
+export const LOAD_COMMENTS_COUNT = "LOAD_COMMENTS_COUNT";

@@ -3,11 +3,17 @@
   margin: 0;
   padding: 0;
 }
-html {
-  --yt-spec-text-primary: #030303;
-  --yt-spec-text-secondary: #606060;
-}
+
 .app-container {
   display: flex;
   background-color: #f9f9f9;
+}
+
+.yt-player-and-comment {
+  padding: 4px;
+  width: 60vw;
+}
+.yt-video-reccomendation {
+  padding: 4px;
+  width: 30vw;
 }

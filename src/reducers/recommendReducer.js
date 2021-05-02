@@ -6,7 +6,7 @@ const initialState = {
       id: "x71dDdmJaPk",
     },
     {
-      id: "a2GujJZfXpg",
+      id: "ApXoWvfEYVU",
     },
     {
       id: "ItFqjjLPjcA",
@@ -18,19 +18,19 @@ const initialState = {
       id: "X2DUpDxFJyg",
     },
     {
-      id: "RE87rQkXdNw",
+      id: "UtF6Jej8yb4",
     },
   ],
   defaultVideoId: "x71dDdmJaPk",
+  currentVideoId: "",
 };
 
-//@todo updating defaultVideoId not happening immutably
 const recommendReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_NEW_VIDEO:
       state = {
         ...state,
-        defaultVideoId: "" + action.payload.videoId,
+        currentVideoId: "" + action.payload.videoId,
       };
       return state;
     default:
