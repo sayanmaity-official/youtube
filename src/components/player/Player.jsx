@@ -5,6 +5,8 @@ import axios from "axios";
 import { commentLoader, loadCommentCount } from "../../action/commentAction";
 import { timeFormatter, ViewsFormatter } from "../../utils/util";
 
+import "../../common.css";
+
 const Player = () => {
   const dispatch = useDispatch();
   const { defaultVideoId, currentVideoId } = useSelector(
@@ -75,8 +77,17 @@ const Player = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-      <h5 style={{ color: "#030303" }}> {videoHeader.title}</h5>
-      <p style={{ color: "#606060", fontSize: "1.1rem" }}>
+      <h5
+        className="yt-text-primary"
+        style={{ fontSize: "1.8rem", margin: "10px 0px" }}
+      >
+        {" "}
+        {videoHeader.title}
+      </h5>
+      <p
+        className="yt-text-secondary"
+        style={{ fontSize: "1.4rem", margin: "10px 0px" }}
+      >
         {ViewsFormatter(videoHeader.views)} views•Premiered{" "}
         {timeFormatter((new Date() - new Date(videoHeader.publishedAt)) / 1000)}{" "}
         ago

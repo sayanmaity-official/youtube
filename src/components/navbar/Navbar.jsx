@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./Navbar.css";
+import "../../common.css";
 
 const Navbar = () => {
   return (
@@ -18,7 +19,10 @@ const Navbar = () => {
           placeholder="Search"
         />
         <div className="search-icon">
-          <i className="fas fa-search" style={{ fontSize: "1.5rem" }}></i>
+          <i
+            className="fas fa-search yt-text-secondary"
+            style={{ fontSize: "1.5rem" }}
+          ></i>
         </div>
       </div>
     </header>

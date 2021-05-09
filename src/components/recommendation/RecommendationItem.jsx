@@ -28,7 +28,7 @@ const RecommendationItem = (props) => {
           {props.title.substring(0, 100)}
         </h5>
         <h5 className="channel-name yt-text-secondary">{props.author_name}</h5>
-        <span className="yt-text-secondary">
+        <span className="yt-text-secondary" style={{ fontSize: "1.3rem" }}>
           {ViewsFormatter(props.viewCount)} views &middot;{" "}
           {timeFormatter((new Date() - new Date(props.publishedAt)) / 1000)} ago
         </span>

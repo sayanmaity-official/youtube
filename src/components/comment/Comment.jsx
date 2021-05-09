@@ -5,6 +5,7 @@ import { addNewComment } from "../../action/commentAction";
 import { timeFormatter, ViewsFormatter } from "../../utils/util";
 
 import "./Comment.css";
+import "../../common.css";
 
 const Comment = () => {
   const dispatch = useDispatch();
@@ -58,7 +59,10 @@ const Comment = () => {
       ) : (
         <div className="comment-header">
           <div className="signed-user-img">
-            <i className="fas fa-user-circle fa-3x"></i>
+            <i
+              className="fas fa-user-circle"
+              style={{ fontSize: "4.8rem" }}
+            ></i>
           </div>
           <form className="post-comment">
             <div className="comment-input-text-box">
@@ -73,14 +77,14 @@ const Comment = () => {
               />
             </div>
             <div className="comment-disclaimer-and-buttons">
-              <span className="yt-t-c">
+              <span className="yt-t-c yt-text-secondary">
                 By completing this action you are creating a channel​ and agree
                 to YouTube's Terms of Service​.
               </span>
               <div className="comment-action-buttons">
                 <button
                   type="reset"
-                  className="comment-cancel"
+                  className="comment-cancel yt-text-secondary"
                   onClick={resetComment}
                 >
                   CANCEL
@@ -113,16 +117,21 @@ const Comment = () => {
                   />
                 </div>
                 <div className="main-comment">
-                  <span className="yt-primary-text p-2">
+                  <span className="yt-text-primary author-name-text">
                     {comment.authorDisplayName}
                   </span>
-                  <span className="yt-secondary-text p-2">
+                  <span className="yt-text-secondary time-formatter">
                     {timeFormatter(
                       (new Date() - new Date(comment.publishedAt)) / 1000
                     )}{" "}
                     ago
                   </span>
-                  <p className="yt-comment-text p-2">{comment.textOriginal}</p>
+                  <p
+                    className="yt-text-primary"
+                    style={{ fontSize: "1.3rem", padding: "4px" }}
+                  >
+                    {comment.textOriginal}
+                  </p>
                 </div>
               </li>
             ))

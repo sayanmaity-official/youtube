@@ -6,14 +6,19 @@
 
 .app-container {
   display: flex;
-  background-color: #f9f9f9;
+  background-color: #f1f1f1;
+  margin-top: 10px;
 }
 
 .yt-player-and-comment {
   padding: 4px;
   width: 60vw;
+  margin-left: 75px;
+  margin-top: 20px;
 }
 .yt-video-reccomendation {
   padding: 4px;
-  width: 30vw;
+  margin-right: 80px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
